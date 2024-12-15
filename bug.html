@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be hidden.
+  </div>
+
+  <script>
+    // Incorrect way to hide an element (using style attribute directly)
+    document.getElementById("myDiv").style.display = "none";
+    // The bug: The element's style is overwritten each time the Javascript is run, causing unexpected behaviour.
+    // For example: If you change the text later on and rerun the JS, the element is hidden again.
+  </script>
+</body>
+</html>
