@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+  <div id="myDiv" class="shown">
+    This text will be visible.
+  </div>
+
+  <button onclick="toggleVisibility()">Toggle Visibility</button>
+
+  <script>
+    function toggleVisibility() {
+      const div = document.getElementById("myDiv");
+      if (div.classList.contains("shown")) {
+        div.classList.remove("shown");
+        div.classList.add("hidden");
+      } else {
+        div.classList.remove("hidden");
+        div.classList.add("shown");
+      }
+    }
+  </script>
+</body>
+</html>
